@@ -45,5 +45,24 @@ namespace MaxUsingGenerics
             }
             return 0.0;
         }
+        public string MaximumStr(string firstStr, string secondStr, string thirdStr)
+        {
+            if (firstStr.CompareTo(secondStr) == 1 & firstStr.CompareTo(thirdStr) == 1)
+            {
+                Console.WriteLine(firstStr + " is greater");
+                return firstStr;
+            }
+            if (secondStr.CompareTo(firstStr) == 1 & secondStr.CompareTo(thirdStr) == 1)
+            {
+                Console.WriteLine(secondStr + " is greater");
+                return secondStr;
+            }
+            if (thirdStr.CompareTo(firstStr) == 1 & thirdStr.CompareTo(secondStr) == 1)
+            {
+                Console.WriteLine(thirdStr + " is greater");
+                return thirdStr;
+            }
+            return null;
+        }
     }
 }

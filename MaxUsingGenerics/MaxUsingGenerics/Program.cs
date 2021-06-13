@@ -18,6 +18,12 @@ namespace MaxUsingGenerics
                     double secondFloatValue = Convert.ToDouble(Console.ReadLine());
                     double thirdFloatValue = Convert.ToDouble(Console.ReadLine());
                     objMax.MaximumDouble(firstFloatValue, secondFloatValue, thirdFloatValue);
+
+                    Console.WriteLine("Enter string");
+                    string firstStr = Console.ReadLine();
+                    string secondStr = Console.ReadLine();
+                    string thirdStr = Console.ReadLine();
+                    objMax.MaximumStr(firstStr, secondStr, thirdStr);
         }
     }
 }

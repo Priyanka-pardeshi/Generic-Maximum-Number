@@ -64,8 +64,15 @@ namespace MaxTestCases.Test
             Assert.AreEqual(expected, result);
         }
 
+        [Test]
+        public void test7()
+        {
+            string firstStr = "sidh", secondStr = "sidho", thirdStr = "sid";
+            string expected = secondStr;
+            string result = objMaxDigit.MaximumStr(firstStr, secondStr, thirdStr);
 
-
+            Assert.AreEqual(expected, result);
+        }
 
     }
 }
