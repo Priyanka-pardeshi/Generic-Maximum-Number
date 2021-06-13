@@ -17,8 +17,8 @@ namespace MaxTestCases.Test
         {
             int firstValue = 30;
             int secondValue = 40;
-            int thiredValue = 10;
-            int expected = secondValue;
+            int thiredValue = 50;
+            int expected = thiredValue;
 
             int result = objMaxInt.Maximum(firstValue, secondValue, thiredValue);
 
