@@ -15,14 +15,13 @@ namespace MaxTestCases.Test
         [Test]
         public void Test1()
         {
-            int firstValue = 30;
-            int secondValue = 40;
-            int thiredValue = 50;
-            int expected = thiredValue;
+            int firstValue = 30, secondValue = 50, thiredValue = 10;
+            int expected = secondValue;
 
             int result = objMaxInt.Maximum(firstValue, secondValue, thiredValue);
 
             Assert.AreEqual(expected,result);
         }
+
     }
 }
