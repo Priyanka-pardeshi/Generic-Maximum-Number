@@ -3,17 +3,21 @@
 namespace MaxUsingGenerics
 {
     public class Program
-    {  
+    {
         public static void Main(string[] args)
         {
-            MaxNumberINT objMax = new MaxNumberINT();
-            Console.WriteLine("Welcome");
-            objMax.Maximum(30, 20, 10);
-            int firstValue = Convert.ToInt32(Console.ReadLine());
-            int secondValue = Convert.ToInt32(Console.ReadLine());
-            int thiredValue = Convert.ToInt32(Console.ReadLine());
-            objMax.Maximum(firstValue, secondValue, thiredValue);
-            Console.ReadKey();
+            MaxNumber objMax = new MaxNumber();
+            Console.WriteLine("Enter three int and float no");
+           
+                    int firstIntValue = Convert.ToInt32(Console.ReadLine());
+                    int secondIntValue = Convert.ToInt32(Console.ReadLine());
+                    int thirdIntValue = Convert.ToInt32(Console.ReadLine());
+                    objMax.MaximumInt(firstIntValue, secondIntValue, thirdIntValue);
+            
+                    double firstFloatValue = Convert.ToDouble(Console.ReadLine());
+                    double secondFloatValue = Convert.ToDouble(Console.ReadLine());
+                    double thirdFloatValue = Convert.ToDouble(Console.ReadLine());
+                    objMax.MaximumDouble(firstFloatValue, secondFloatValue, thirdFloatValue);
         }
     }
 }

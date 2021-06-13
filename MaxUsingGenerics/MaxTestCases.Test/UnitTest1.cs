@@ -5,20 +5,14 @@ namespace MaxTestCases.Test
 {
     public class Tests
     {
-        [SetUp]
-        public void Setup()
-        {
-
-        }
-        MaxNumberINT objMaxInt = new MaxNumberINT();
-
-        [Test]
+        
+        MaxNumber objMaxDigit = new MaxNumber();
+       [Test]
         public void Test1()
         {
             int firstValue = 300, secondValue = 50, thiredValue = 100;
             int expected = firstValue;
-
-            int result = objMaxInt.Maximum(firstValue, secondValue, thiredValue);
+            int result = objMaxDigit.MaximumInt(firstValue, secondValue, thiredValue);
 
             Assert.AreEqual(expected, result);
         }
@@ -27,8 +21,7 @@ namespace MaxTestCases.Test
         {
             int firstValue = 30, secondValue = 200, thiredValue = 10;
             int expected = secondValue;
-
-            int result = objMaxInt.Maximum(firstValue, secondValue, thiredValue);
+            int result = objMaxDigit.MaximumInt(firstValue, secondValue, thiredValue);
 
             Assert.AreEqual(expected, result);
         }
@@ -36,13 +29,43 @@ namespace MaxTestCases.Test
         [Test]
         public void Test3()
         {
-        int firstValue = 30;
-        int secondValue = 20;
-        int thiredValue = 100;
+        int firstValue = 30, secondValue = 20, thiredValue = 100;
         int expected = thiredValue;
-        int result = objMaxInt.Maximum(firstValue, secondValue, thiredValue);
+        int result = objMaxDigit.MaximumInt(firstValue, secondValue, thiredValue);
 
         Assert.AreEqual(expected, result);
         }
+        [Test]
+        public void Test4()
+        {
+            double firstValue = 300.67, secondValue = 50.99, thiredValue = 100.10;
+            double expected = firstValue;
+            double result = objMaxDigit.MaximumDouble(firstValue, secondValue, thiredValue);
+
+            Assert.AreEqual(expected, result);
+        }
+        [Test]
+        public void Test5()
+        {
+            double firstValue = 30.3, secondValue = 200.56, thiredValue = 10.54;
+            double expected = secondValue;
+            double result = objMaxDigit.MaximumDouble(firstValue, secondValue, thiredValue);
+
+            Assert.AreEqual(expected, result);
+        }
+
+        [Test]
+        public void Test6()
+        {
+            double firstValue = 30, secondValue = 20, thiredValue = 100;
+            double expected = thiredValue;
+            double result = objMaxDigit.MaximumDouble(firstValue, secondValue, thiredValue);
+
+            Assert.AreEqual(expected, result);
+        }
+
+
+
+
     }
 }
