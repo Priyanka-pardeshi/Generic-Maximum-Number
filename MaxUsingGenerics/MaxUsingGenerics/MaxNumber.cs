@@ -6,25 +6,28 @@ namespace MaxUsingGenerics
 {
     public class MaxNumber
     {
-        public dynamic MaximumGeneric<T>(T first,  T second, T third)
+        /// <summary>
+        /// Mathod will sort the list and returned a Last number which is maximum value
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="val">Take multiple values</param>
+        /// <returns></returns>
+        public dynamic MaximumGeneric<T>(params T[] val )
         {
-            //Console.WriteLine(Comparer<T>.Default.Compare(first,second)==1);
-
-            if(Comparer<T>.Default.Compare(first, second)==1 & Comparer<T>.Default.Compare(first,third)==1)
+            for (dynamic i = 0; i < val.Length - 1; i++)
             {
-                Console.WriteLine(first + " is greater");
-                return first;
+                for (dynamic j = 0; j < val.Length - i - 1; j++)
+                {
+                    if (Comparer<T>.Default.Compare(val[j],val[j+1])==1)
+                    {
+                        dynamic temp= val[j];
+                        val[j] = val[j + 1];
+                        val[j + 1] = temp;
+                    }
+                }
             }
-            if (Comparer<T>.Default.Compare(second,third)==1 & Comparer<T>.Default.Compare(second,first)==1)
-            {
-                Console.WriteLine(second + " is greater");
-                return second;
-            }
-            if (Comparer<T>.Default.Compare(third,first)==1 & Comparer<T>.Default.Compare(third,second)==1)
-            {
-                Console.WriteLine(third + " is greater");
-                return third;
-            }
+            dynamic len = val.Length;
+            Console.WriteLine("maximum  value is:"+val[len-1]);
             return 0;
             
         }

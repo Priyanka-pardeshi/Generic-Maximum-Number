@@ -7,7 +7,7 @@ namespace MaxUsingGenerics
         public static void Main(string[] args)
         {
             MaxNumber objMax = new MaxNumber();
-            Console.WriteLine("Enter three int Number");
+            Console.WriteLine("Enter three integer Number");
 
             int firstvalue = Convert.ToInt32(Console.ReadLine());
             int secondvalue = Convert.ToInt32(Console.ReadLine());
@@ -15,17 +15,17 @@ namespace MaxUsingGenerics
 
             objMax.MaximumGeneric<int>(firstvalue, secondvalue, thirdvalue);
 
-            Console.WriteLine("Enter float val:");
-            double firstFloatValue = Convert.ToDouble(Console.ReadLine());
-            double secondFloatValue = Convert.ToDouble(Console.ReadLine());
-            double thirdFloatValue = Convert.ToDouble(Console.ReadLine());
-            objMax.MaximumGeneric<double>(firstFloatValue, secondFloatValue, thirdFloatValue);
+            Console.WriteLine("Enter float Numbers:");
+            double firstfloatvalue = Convert.ToDouble(Console.ReadLine());
+            double secondfloatvalue = Convert.ToDouble(Console.ReadLine());
+            double thirdfloatvalue = Convert.ToDouble(Console.ReadLine());
+            objMax.MaximumGeneric<double>(firstfloatvalue, secondfloatvalue, thirdfloatvalue);
 
             Console.WriteLine("Enter string");
-            string firstStr = Console.ReadLine();
-            string secondStr = Console.ReadLine();
-            string thirdStr = Console.ReadLine();
-            objMax.MaximumGeneric<string>(firstStr, secondStr, thirdStr);
+            string firststr = Console.ReadLine();
+            string secondstr = Console.ReadLine();
+            string thirdstr = Console.ReadLine();
+            objMax.MaximumGeneric<string>(firststr, secondstr, thirdstr);
         }
     }
 }
