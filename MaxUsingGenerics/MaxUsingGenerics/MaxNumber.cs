@@ -12,7 +12,7 @@ namespace MaxUsingGenerics
         /// <typeparam name="T"></typeparam>
         /// <param name="val">Take multiple values</param>
         /// <returns></returns>
-        public dynamic MaximumGeneric<T>(params T[] val )
+        public T MaximumGeneric<T>(params T[] val )
         {
             for (dynamic i = 0; i < val.Length - 1; i++)
             {
@@ -28,7 +28,7 @@ namespace MaxUsingGenerics
             }
             dynamic len = val.Length;
             Console.WriteLine("maximum  value is:"+val[len-1]);
-            return 0;
+            return val[len-1];
             
         }
     }

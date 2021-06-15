@@ -12,9 +12,7 @@ namespace MaxTestCases.Test
         {
             int firstValue = 300, secondValue = 50, thirdValue = 100;
             int expected = firstValue;
-            
-            int result=objMaxDigit.MaximumGeneric<int>(firstValue, secondValue, thirdValue);
-
+            int result = objMaxDigit.MaximumGeneric<int>(firstValue, secondValue, thirdValue);
             Assert.AreEqual(expected, result);
         }
         
@@ -35,7 +33,6 @@ namespace MaxTestCases.Test
             string firstStr = "sidh", secondStr = "sidho", thirdStr = "sid";
             string expected = secondStr;
             string result = objMaxDigit.MaximumGeneric(firstStr, secondStr, thirdStr);
-
             Assert.AreEqual(expected, result);
         }
 

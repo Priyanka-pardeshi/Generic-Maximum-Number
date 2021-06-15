@@ -6,26 +6,41 @@ namespace MaxUsingGenerics
     {
         public static void Main(string[] args)
         {
+            //creating object of class MaxNumber
             MaxNumber objMax = new MaxNumber();
-            Console.WriteLine("Enter three integer Number");
+            Console.WriteLine("Enter your choice ?? \n1. Integer \n 2.Float \n3.String");
+            int choice = Convert.ToInt32(Console.ReadLine());
+            switch (choice)
+            {
+                case 1:
+                    Console.WriteLine("How many Integer Number you Want to check???");
+                    int numberOfInput = Convert.ToInt32(Console.ReadLine());
+                    //creating array of an input size
+                    int[] arr = new int[numberOfInput];
+                    
+                    for (int a = 0; a < numberOfInput; a++)
+                    {
+                        arr[a] = Convert.ToInt32(Console.ReadLine());
+                    }
+                    //calling generic method passing array as an arguments
+                    objMax.MaximumGeneric<int>(arr);
+                    break;
 
-            int firstvalue = Convert.ToInt32(Console.ReadLine());
-            int secondvalue = Convert.ToInt32(Console.ReadLine());
-            int thirdvalue = Convert.ToInt32(Console.ReadLine());
+                case 2:
+                    Console.WriteLine("How many float Number you Want to check???");
+                    int numberOfFloatInput = Convert.ToInt32(Console.ReadLine());
+                    //creating array of an input size
+                    double[] arrFloat = new double[numberOfFloatInput];
+                    
+                    for (int a = 0; a < numberOfFloatInput + 1; a++)
+                    {
+                        arrFloat[a] = Convert.ToDouble(Console.ReadLine());
+                    }
+                    //calling generic method passing array as an arguments
+                    objMax.MaximumGeneric<double>(arrFloat);
+                    break;
+            }
 
-            objMax.MaximumGeneric<int>(firstvalue, secondvalue, thirdvalue);
-
-            Console.WriteLine("Enter float Numbers:");
-            double firstfloatvalue = Convert.ToDouble(Console.ReadLine());
-            double secondfloatvalue = Convert.ToDouble(Console.ReadLine());
-            double thirdfloatvalue = Convert.ToDouble(Console.ReadLine());
-            objMax.MaximumGeneric<double>(firstfloatvalue, secondfloatvalue, thirdfloatvalue);
-
-            Console.WriteLine("Enter string");
-            string firststr = Console.ReadLine();
-            string secondstr = Console.ReadLine();
-            string thirdstr = Console.ReadLine();
-            objMax.MaximumGeneric<string>(firststr, secondstr, thirdstr);
         }
     }
 }
